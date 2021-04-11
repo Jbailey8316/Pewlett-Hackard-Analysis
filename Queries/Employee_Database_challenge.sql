@@ -61,3 +61,34 @@ WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY e.emp_no ASC;
 
 SELECT * FROM titles;
+
+-- Additonal SQL Queries
+-- Total Count of Employees
+SELECT COUNT (emp_no) FROM employees;
+
+-- Mentors
+SELECT title, 
+COUNT (emp_no )
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY COUNT (emp_no) DESC;
+
+-- Retiring Titles
+SELECT COUNT (emp_no) as "count", title
+FROM unique_titles
+GROUP BY title
+ORDER BY "count" DESC;
+
+-- Diff of Retirng from Mentors
+SELECT COUNT (un.emp_no) As retiring,
+COUNT (me.emp_no) AS mentors,
+COUNT (un.emp_no) - COUNT(me.emp_no) AS vacancies
+FROM unique_titles AS un
+FULL OUTER JOIN mentorship_eligibility AS me
+ON me.emp_no = un.emp_no;
+
+-- Avg Salary
+SELECT AVG (DISTINCT salary) ::numeric (10,2)
+FROM salaries;
+
+
