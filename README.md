@@ -13,18 +13,32 @@
 The objective of this project was to update the provided csv files into a PostgreSQL database using SQL and pgAdmin to determine the amount of employees at Pewlett Hackard who are approaching retirement and to use that data to create a mentorship program to help backfill the positions that the company may be losing.
 
 ## Results
-![retire](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/Retiring_titles.PNG)
-* There are 90,398 retiring positions as detailed in the above image.  The highest category of potential retirees are senior engineers totaling 29,414.
-* The lowest amount of retiring positions are managers, totaling 2.
+The initial analysts of Pewlett Hackard showed they have a total workforce of 300,025 employees.  After some more research we were able to determine that 90,398 employees were reaching the retirment age.  Given this assesment regarding a large number of employees potentially leaving, we decided to break down the retiring employees by title to gauge the impact this would have across the business.  From our analysis we have determined 4 key points:
 
+* There are 90,398 retiring positions.  The highest category of potential retirees are senior engineers totaling 29,414.
+* The lowest amount of retiring positions are managers, totaling 2.
+* There are 1,940 employees who are eligible for the mentorship program.  Far fewer than the potential vacancies.
+* There are no managers who are eligible for the mentorship program and 213 senior engineers.
+
+Fig 1.
+### Total Employee Count
+![ee](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/total_ee_count.PNG)
+
+Fig 2.
+### Retirement Ready Employees by Title
+![retire](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/Retiring_titles.PNG)
+
+### Employee Mentorship Program Count
 ![mentors](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/Mentorship_titles.PNG)
-* There are 1,940 employees who are eligible for the mentorship program.
-* There are no managers who are eligible for the mentorship program and 213 senior engineers as shown above.
 
 ## Summary
-Pewlett Hackard will be in need of 90,398 employees in total.  However, by narrowing down the birth dates of current employees we can determine that the initial employees to retire would total 31,374. This gives Pewlett Hackard a little over 6% for eligible mentors to train and backfill these positions. The first initial shortage points to needing a candidate to replace a manager along with several other senior staff members.  Given the low number of mentorship eligible employees, Pewlett Hackard should look into expanding their mentorship program. By utilizing the current retirement ready employees, Pewlett Hackard should have plenty of experienced personnel to expand the mentorship program and create suitable replacements before all eligible employees retire.  
+Pewlett Hackard has a signifcant number of employees totaling over 90 thousand who would be able to retire at roughly the same time.  This could potentially cause a meaningful impact across the company given the number of vacancies in a short timeframe.  A possible solution to this immediate turn over would be to increase the reach of the mentorship program.  A possible way to do this would be to expand the age range of mentor eligible employees.  Pewlett Hackard could also begin onboarding new replacements to back fill the needed postions.
 
-![first](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/first_titles.PNG)
+### Retirement Eligible Employees vs. Mentor Eligibile Employees
+![ee_dif](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/dif_between_retire_mentor.PNG)
 
-The following is the SQL query used to gather the data for the above dataframe:
-![first_SQL](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/first_sql.PNG)
+Upon further analysis we can see that the average salary for Pewlett Hackard is just over 60 thousand annually. If they were to decide to start a hiring campaign to help alleviate the large turn over from possible retirements; they may need to reevaluate their salaries across their positions.  This would help bring new talent to the company and a potential wage increase would also help to retain experienced employees already in place.  
+
+### Average Salary
+![avg_salary](https://github.com/Jbailey8316/Pewlett-Hackard-Analysis/blob/main/Data/avg_salary.PNG)
+
